@@ -22,7 +22,9 @@ cmd.commands.help = function(x){
 		if(x){
 			if(x===color){cmd.log("",true);}
 		}else(
-			
+			cmd.log("",true);
+			cmd.log("",true);
+			cmd.log("",true);
 		)
 	}
 //created run function
