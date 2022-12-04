@@ -22,10 +22,7 @@ cmd.commands.help = function(x){
 		if(x){
 			if(x===color){cmd.log("",true);}
 		}else(
-			cmd.log("<span style='font-weight: bold;'>List Of Commands:</span>",true);
-			cmd.log("Help: shows this list, with parameter shows syntax for specific command",true);
-			cmd.log("	example: Help Color; shows syntax for color command",true);
-			cmd.log("",true);
+			
 		)
 	}
 //created run function
