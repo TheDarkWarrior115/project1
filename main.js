@@ -22,8 +22,8 @@ cmd.commands.help = function(x){
 		if(x){
 			if(x===color){cmd.log("",true);}
 		}else{
-			cmd.log("",true);
-			cmd.log("",true);
+			cmd.log("<span style='font-weight: bold;'>List Of Commands:</span>");
+			cmd.log("Help: shows this list; if parameter shows command syntax;",true);
 			cmd.log("",true);
 		}
 	}
@@ -38,13 +38,13 @@ cmd.run = function(x) {
 			cmd1 = command.split(" ");
 			if(cmd1.at(2)===""){
 				hasspace = false; //if accidental space than returns to no parameters ln
-			}else(//if it has parameters it will do this
+			}else{//if it has parameters it will do this
 				//cmd2 = parameters, cmd 1 = command name
 				cmd2 = command.replace("cmd1.at(1)");
 				cmd1 = cmd1.at(0);
 				cmd1 = cmd1.toLowerCase();
 				if(cmd1==="help"){cmd.commands.help(cmd2);};
-			)
+			}
 		}
 		//tests for no parameters
 		if(command.includes(" ")===false){
@@ -67,3 +67,6 @@ cmd.log = function(x,ignore) {
 		if(ignore === true){cmd.logobj.innerHTML += "<br>" + x;}
 		
 	};
+document.body.appendChild(b);
+document.body.appendChild(a);
+document.head.appendChild(c);
