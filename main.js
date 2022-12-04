@@ -21,11 +21,11 @@ cmd.commands.help = function(x){
 		//if x parameter it will use it and display command syntax, otherwise will display whole list
 		if(x){
 			if(x===color){cmd.log("",true);}
-		}else(
+		}else{
 			cmd.log("",true);
 			cmd.log("",true);
 			cmd.log("",true);
-		)
+		}
 	}
 //created run function
 cmd.run = function(x) {
