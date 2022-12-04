@@ -40,7 +40,11 @@ cmd.run = function(x) {
 			if(cmd1.at(2)===""){
 				hasspace = false; //if accidental space than returns to no parameters ln
 			}else(//if it has parameters it will do this
-				cmd2 = command.replace
+				//cmd2 = parameters, cmd 1 = command name
+				cmd2 = command.replace("cmd1.at(1)");
+				cmd1 = cmd1.at(0);
+				cmd1 = cmd1.toLowerCase();
+				if(cmd1==="help"){cmd.commands.help(cmd2);};
 			)
 		}
 		//tests for no parameters
@@ -48,10 +52,12 @@ cmd.run = function(x) {
 		noparameters=true;
 		};
 		if(hasspace===false){
-		noparameters=true
+		noparameters=true;
+		command = command.replace(" ","");
+		command = command.toLowerCase();
 		};
 		if(noparameters===true){//if no parameters it will do this
-			
+			if(command==="help"){cmd.commands.help()};
 		}
 		
 	};
