@@ -50,7 +50,7 @@ cmd.run = function(x) {
 		if(command.includes(" ")===false){
 		noparameters=true;
 		};
-		if(hasspace===false){
+		if(hasspace){
 		noparameters=true;
 		command = command.replace(" ","");
 		command = command.toLowerCase();
