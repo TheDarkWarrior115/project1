@@ -45,3 +45,21 @@ cmd.log = function(x,a) {
 	if(x){cmd.logobj.innerHTML += "<br>"+x+""};}
 	if(a===true){if(x){cmd.logobj.innerHTML += "<br>"+x+""};};
 };
+cmd.commands.help = function(x){
+	if(x){
+		if(x===){
+		   
+		}else if(){
+		
+		}else if(){
+		
+		}else if(){
+		
+		}else{}
+	}else{
+		cmd.log(`<span style="font-weight:bold">	Help List</span>
+Help: shows this list or shows syntax of specific command
+	Example: Help color
+`)
+	}
+}
