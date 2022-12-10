@@ -36,7 +36,7 @@ cmd.run = function(x) {
 				cmd.commands.color();
 			}else if(cmd.val==="logtoggle"){
 				cmd.commands.logtoggle();
-			}else{cmd.log("Unknown Command",true};
+			}else{cmd.log("Unknown Command",true);}
 			
 		}
 	};
