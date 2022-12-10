@@ -12,6 +12,7 @@ cmd.commands = {};
 cmd.cmdobj=a;
 cmd.logobj=b;
 cmd.val = "";
+cmd.logtoggle="true";
 cmd.run = function(x) {
 		cmd.val = cmd.cmdobj.value;
 		if(x){cmd.val = x};
@@ -19,18 +20,28 @@ cmd.run = function(x) {
 		if(cmd.val.includes(" ")){
 			cmd1 = cmd.val.split(" ").at(0);
 			cmd2 = cmd.val.replace(cmd1,"");
-			
+			cmd1 = cmd1.toLowerCase();
+			if(cmd1==="help"){
+				cmd.commands.help(cmd2);
+			}else if(cmd1==="color"){
+				cmd.commands.color(cmd2);
+			}else if(cmd1==="logtoggle"){
+				cmd.commands.logtoggle(cmd2);
+			}else{cmd.log("Unknown Command",true)}
 		}else{
-			if(cmd.val===){
-			   
-			}else if(){
-				
-			}else if(){
-				
-			}else
+			cmd.val=cmd.val.toLowerCase();
+			if(cmd.val==="help"){
+				cmd.commands.help();
+			}else if(cmd.val==="color"){
+				cmd.commands.color();
+			}else if(cmd.val==="logtoggle"){
+				cmd.commands.logtoggle();
+			}else{cmd.log("Unknown Command",true};
 			
 		}
 	};
-cmd.log = function(x) {
-	if(x){cmd.logobj.innerHTML += "<br>"+x+""};
+cmd.log = function(x,a) {
+	if(cmd.logtoggle=true){
+	if(x){cmd.logobj.innerHTML += "<br>"+x+""};}
+	if(a===true){if(x){cmd.logobj.innerHTML += "<br>"+x+""};};
 };
